@@ -1,21 +1,19 @@
-#ifndef CPU_INFO_H
-#define CPU_INFO_H
+// DevInfo.h
 
-typedef struct
-{
-    char name[20];  
+#ifndef DEVINFO_H_
+#define DEVINFO_H_
+
+typedef struct {
+    char name[32];
     unsigned int user;
     unsigned int nice;
     unsigned int system;
     unsigned int idle;
-}CPU_OCCUPY;
+} CPU_OCCUPY;
 
 float GetCpuUsage();
-unsigned long GetMemFree();
-unsigned long GetMemTotal();
 float GetCpuTemp();
-long long GetAvailDisk();
-float cal_cpuoccupy(CPU_OCCUPY *o,CPU_OCCUPY *n);
-void get_cpuoccupy (CPU_OCCUPY *cpust);
+int GetMemUsage();
+float GetDiskUsagePercentage();
 
-#endif //CPU_INFO_H
+#endif /* DEVINFO_H_ */
