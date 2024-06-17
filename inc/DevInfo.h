@@ -15,5 +15,6 @@ float GetCpuUsage();
 float GetCpuTemp();
 int GetMemUsage();
 float GetDiskUsagePercentage();
-
+float cal_cpuoccupy(CPU_OCCUPY *o,CPU_OCCUPY *n);
+void get_cpuoccupy (CPU_OCCUPY *cpust);
 #endif /* DEVINFO_H_ */
